@@ -1,0 +1,346 @@
+/* ==========================================
+        MANAGE PRODUCTS PAGE
+========================================== */
+
+.manage-products-page{
+
+    background:#F8F4EF;
+    min-height:100vh;
+    padding:30px;
+
+}
+
+/* ==========================================
+        PAGE HEADER
+========================================== */
+
+.page-header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+
+}
+
+.page-header h2{
+
+    color:#8B5E34;
+    font-weight:700;
+
+}
+
+.page-header p{
+
+    color:#666;
+    margin-top:8px;
+
+}
+
+/* ==========================================
+        ADD BUTTON
+========================================== */
+
+.add-btn{
+
+    background:#8B5E34;
+    color:white;
+    border:none;
+    border-radius:12px;
+    padding:12px 24px;
+    font-weight:600;
+    transition:.3s;
+
+}
+
+.add-btn:hover{
+
+    background:#6F4727;
+    color:white;
+    transform:translateY(-2px);
+
+}
+
+/* ==========================================
+        SEARCH
+========================================== */
+
+.search-section{
+
+    margin-bottom:20px;
+
+}
+
+.input-group{
+
+    max-width:500px;
+
+}
+
+.input-group-text{
+
+    background:white;
+    border:none;
+
+}
+
+.form-control{
+
+    border:none;
+    height:50px;
+    box-shadow:none;
+
+}
+
+.form-control:focus{
+
+    box-shadow:none;
+
+}
+
+/* ==========================================
+        PRODUCT CARD
+========================================== */
+
+.product-card{
+
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.3s;
+    height:100%;
+
+}
+
+.product-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/* ==========================================
+        PRODUCT IMAGE
+========================================== */
+
+.product-image{
+
+    width:100%;
+    height:250px;
+    object-fit:cover;
+
+}
+
+/* ==========================================
+        PRODUCT BODY
+========================================== */
+
+.product-body{
+
+    padding:20px;
+
+}
+
+.category{
+
+    background:#F4E8DD;
+    color:#8B5E34;
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:600;
+
+}
+
+.product-body h4{
+
+    margin-top:15px;
+    font-weight:700;
+    color:#2F2F2F;
+
+}
+
+.description{
+
+    color:#666;
+    margin:12px 0;
+    min-height:50px;
+
+}
+
+.price{
+
+    color:#8B5E34;
+    font-weight:700;
+    margin-top:10px;
+
+}
+
+.rating{
+
+    color:#FFC107;
+    margin-top:10px;
+
+}
+
+.rating span{
+
+    color:#444;
+    margin-left:8px;
+    font-weight:600;
+
+}
+
+/* ==========================================
+        FOOTER
+========================================== */
+
+.card-footer-custom{
+
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+
+}
+
+/* ==========================================
+        UPDATE BUTTON
+========================================== */
+
+.update-btn{
+
+    flex:1;
+    background:#8B5E34;
+    color:white;
+    border:none;
+    border-radius:10px;
+    padding:10px;
+
+}
+
+.update-btn:hover{
+
+    background:#6F4727;
+    color:white;
+
+}
+
+/* ==========================================
+        DELETE BUTTON
+========================================== */
+
+.delete-btn{
+
+    flex:1;
+    background:#DC3545;
+    color:white;
+    border:none;
+    border-radius:10px;
+    padding:10px;
+
+}
+
+.delete-btn:hover{
+
+    background:#BB2D3B;
+    color:white;
+
+}
+
+/* ==========================================
+        EMPTY PAGE
+========================================== */
+
+.empty-products{
+
+    margin-top:80px;
+
+}
+
+.empty-icon{
+
+    font-size:90px;
+    color:#D6A77A;
+    margin-bottom:20px;
+
+}
+
+.empty-products h3{
+
+    color:#8B5E34;
+
+}
+
+.empty-products p{
+
+    color:#777;
+
+}
+
+/* ==========================================
+        RESPONSIVE
+========================================== */
+
+@media(max-width:992px){
+
+.page-header{
+
+flex-direction:column;
+align-items:flex-start;
+gap:20px;
+
+}
+
+.add-btn{
+
+width:100%;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.manage-products-page{
+
+padding:15px;
+
+}
+
+.card-footer-custom{
+
+flex-direction:column;
+
+}
+
+.product-image{
+
+height:220px;
+
+}
+.stock{
+
+color:#16A34A;
+
+font-weight:600;
+
+margin-top:10px;
+
+}
+.product-count{
+
+background:#8B5E34;
+
+color:white;
+
+padding:8px 18px;
+
+border-radius:30px;
+
+display:inline-block;
+
+margin-bottom:15px;
+
+}
+}

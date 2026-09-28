@@ -1,0 +1,244 @@
+body{
+
+background:#F8F4EF;
+
+}
+
+.back-btn{
+
+text-decoration:none;
+
+color:#8B5E34;
+
+font-weight:600;
+
+}
+
+.image-card{
+
+background:white;
+
+border-radius:20px;
+
+padding:20px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.main-image{
+
+width:100%;
+
+height:360px;
+
+object-fit:cover;
+
+border-radius:15px;
+
+}
+
+.category{
+
+background:#FDF2E9;
+
+padding:8px 18px;
+
+border-radius:20px;
+
+color:#8B5E34;
+
+font-weight:600;
+
+}
+
+.product-title{
+
+margin-top:16px;
+
+font-size:28px;
+
+font-weight:700;
+
+}
+
+.rating{
+
+margin:15px 0;
+
+color:#FFC107;
+
+}
+
+.rating span{
+
+color:#444;
+
+margin-left:10px;
+
+}
+
+.price{
+
+font-size:26px;
+
+color:#8B5E34;
+
+font-weight:700;
+
+margin:14px 0;
+
+}
+
+.description{
+
+line-height:1.6;
+
+font-size:14px;
+
+color:#666;
+
+}
+
+.quantity-section{
+
+    margin:20px 0;
+
+}
+
+.section-title{
+
+    font-size:17px;
+
+    font-weight:600;
+
+    color:#333;
+
+    margin-bottom:12px;
+
+    display:block;
+
+}
+
+.quantity-box{
+    width:110px;
+    max-width:100%;
+    height:40px;
+    border:2px solid #E7D5C5;
+    border-radius:10px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 6px;
+    background:#FFF;
+    transition:.12s;
+}
+
+.quantity-box:hover{
+
+    border-color:#8B5E34;
+
+}
+
+.qty-btn{
+    width:30px;
+    height:30px;
+    border:none;
+    border-radius:6px;
+    background:#F8F4EF;
+    color:#8B5E34;
+    font-size:14px;
+    transition:.12s;
+}
+
+.qty-btn:hover{
+
+    background:#8B5E34;
+
+    color:white;
+
+}
+
+.qty-value{
+    font-size:16px;
+    font-weight:700;
+    color:#2F2F2F;
+    min-width:24px;
+    text-align:center;
+}
+
+.action-buttons{
+
+display:flex;
+	gap:12px;
+	flex-wrap:wrap;
+
+}
+
+.wishlist-btn{
+
+border:2px solid #8B5E34;
+
+color:#8B5E34;
+
+padding:9px 18px;
+
+border-radius:10px;
+
+font-size:14px;
+
+}
+
+.wishlist-btn:hover{
+
+background:#8B5E34;
+
+color:white;
+
+}
+
+.cart-btn{
+
+background:#8B5E34;
+
+color:white;
+
+padding:9px 18px;
+
+border-radius:10px;
+
+font-size:14px;
+
+}
+
+.cart-btn:hover{
+
+background:#6f4727;
+
+color:white;
+
+}
+
+.buy-btn{
+
+width:100%;
+
+padding:12px;
+
+background:#D69C5E;
+
+border:none;
+
+color:white;
+
+font-size:16px;
+
+border-radius:10px;
+
+}
+
+.buy-btn:hover{
+
+background:#b57f45;
+
+}

@@ -1,0 +1,136 @@
+<div class="container py-5">
+
+    <!-- Back -->
+
+    <a routerLink="/user/products" class="back-btn">
+
+        <i class="fa-solid fa-arrow-left"></i>
+
+        Back to Products
+
+    </a>
+
+    <div class="row mt-4">
+
+        <!-- IMAGE -->
+
+        <div class="col-lg-5">
+
+            <div class="image-card">
+
+                <img
+                    [src]="myproduct.image"
+                    class="img-fluid main-image">
+
+            </div>
+
+        </div>
+
+        <!-- DETAILS -->
+
+        <div class="col-lg-7">
+
+            <span class="category">
+
+                Pottery
+
+            </span>
+
+            <h2 class="product-title">
+
+                {{myproduct.name}}
+
+            </h2>
+
+            <div class="rating">
+
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+
+                <span>4.8</span>
+
+            </div>
+
+            <h3 class="price">
+
+                {{myproduct.price}}
+
+            </h3>
+
+            <p class="description">
+
+                {{myproduct.description}}
+
+            </p>
+
+            <hr>
+
+            <h6>Material</h6>
+
+            <p>Premium Handmade Clay</p>
+
+            <h6>Delivery</h6>
+
+            <p>3-5 Working Days</p>
+
+            <h6>Seller</h6>
+
+            <p>CraftNest Artisan</p>
+            <div class="quantity-section">
+
+    <label class="section-title">Quantity</label>
+
+    <div class="quantity-box">
+
+        <button type="button" class="qty-btn" (click)="decreaseQuantity()">
+            <i class="fa-solid fa-minus"></i>
+        </button>
+
+        <span class="qty-value">{{ quantity }}</span>
+
+        <button type="button" class="qty-btn" (click)="increaseQuantity()">
+            <i class="fa-solid fa-plus"></i>
+        </button>
+
+    </div>
+
+</div>
+            <div class="action-buttons">
+<button
+    type="button"
+    class="btn wishlist-btn"
+    (click)="addWishlist()">
+
+    <i class="fa-regular fa-heart"></i>
+    Wishlist
+
+</button>
+                <button
+                    class="btn cart-btn"
+                    (click)="addNow()">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    Add To Cart
+
+                </button>
+
+            </div>
+
+            <button
+                class="btn buy-btn mt-3"
+                type="button"
+                (click)="placeorder()">
+
+                Buy Now
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>

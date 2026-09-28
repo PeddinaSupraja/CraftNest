@@ -1,0 +1,36 @@
+<div class="container-fluid login-page">
+    <div class="row vh-100">
+        <!-- LEFT SIDE -->
+        <div class="col-lg-6 left-side d-none d-lg-flex">
+            <img src="assets/images/login-hero.png" alt="CraftNest" class="hero-image">
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <h1>Handmade <br>with love, <br><span>made for you.</span></h1>
+                    <p>Discover unique handmade products and creative services by talented artisans.</p>
+                </div>
+            </div>
+        </div>
+        <!-- RIGHT SIDE -->
+        <div class="col-lg-6 d-flex justify-content-center align-items-center">
+            <div class="login-card">
+                <h2>Welcome Back!</h2>
+                <p class="subtitle">Login to continue your creative journey</p>
+                <form (ngSubmit)="checklogin()" ngNativeValidate #loginForm="ngForm">
+                    <!-- NAME -->
+                    <div class="mb-4 form-group">
+                        <label class="form-label">Name</label>
+                        <input type="text" class="form-control" name="uname" placeholder="Enter your name" required [(ngModel)]="username">
+                    </div>
+                    <!-- PASSWORD -->
+                    <div class="mb-4 form-group">
+                        <label class="form-label">Password</label>
+                        <div class="password-box">
+                            <input type="password" class="form-control" name="upassword" placeholder="Enter password" required [(ngModel)]="password">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn login-btn w-100">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

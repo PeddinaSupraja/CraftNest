@@ -1,0 +1,188 @@
+<div class="container-fluid manage-products-page">
+
+    <!-- ================= Header ================= -->
+
+    <div class="page-header">
+
+        <div>
+
+            <h3>
+                <i class="fa-solid fa-box-open"></i>
+                Manage Products
+            </h3>
+
+            <p>
+                Manage all handmade products from one place.
+            </p>
+
+        </div>
+
+        <button
+            class="btn add-btn"
+            routerLink="/admin/add-product">
+
+            <i class="fa-solid fa-plus"></i>
+
+            Add Product
+
+        </button>
+
+    </div>
+    <div class="product-count">
+
+{{products.length}} Products Available
+
+</div>
+
+    <!-- ================= Search ================= -->
+
+    <div class="search-section">
+
+        <div class="input-group">
+
+            <span class="input-group-text">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+            </span>
+
+            <input
+                type="text"
+                class="form-control"
+                placeholder="Search by Product Name..."
+                [(ngModel)]="searchText">
+
+        </div>
+
+    </div>
+
+    <!-- ================= Products ================= -->
+
+    <div class="row mt-4">
+
+        <div
+            class="col-lg-4 col-md-6 mb-4"
+            *ngFor="let p of filteredProducts()">
+
+            <div class="product-card">
+
+                <!-- Product Image -->
+
+                <img
+                    [src]="p.image"
+                    class="product-image">
+
+                <!-- Product Info -->
+
+                <div class="product-body">
+
+                    <span class="category">
+
+                        {{p.category}}
+
+                    </span>
+
+                    <h4>
+
+                        {{p.name}}
+
+                    </h4>
+
+                    <p class="description">
+
+                        {{p.description}}
+
+                    </p>
+
+                    <div class="rating">
+
+                        <i class="fa-solid fa-star"></i>
+
+                        <span>
+
+                            {{p.rating}}
+
+                        </span>
+
+                    </div>
+
+                    <h3 class="price">
+
+                        ₹{{p.price}}
+
+                    </h3>
+                    <div class="stock">
+
+    <i class="fa-solid fa-box"></i>
+
+    {{p.stock}} In Stock
+
+</div> 
+
+                </div>
+
+                <!-- Buttons -->
+
+                <div class="card-footer-custom">
+
+                    <button
+                        class="btn update-btn"
+                        (click)="editProduct(p.id)">
+
+                        <i class="fa-solid fa-pen"></i>
+
+                        Update
+
+                    </button>
+
+                    <button
+                        class="btn delete-btn"
+                        (click)="deleteProduct(p.id)">
+
+                        <i class="fa-solid fa-trash"></i>
+
+                        Delete
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ================= Empty Products ================= -->
+
+    <div
+        class="empty-products text-center"
+        *ngIf="filteredProducts().length==0">
+
+        <i class="fa-solid fa-box-open empty-icon"></i>
+
+        <h3>
+
+            No Products Found
+
+        </h3>
+
+        <p>
+
+            Try another search or add a new product.
+
+        </p>
+
+        <button
+            class="btn add-btn"
+            routerLink="/admin/add-product">
+
+            <i class="fa-solid fa-plus"></i>
+
+            Add Product
+
+        </button>
+
+    </div>
+
+</div>

@@ -1,0 +1,150 @@
+<div class="container-fluid products-page">
+
+    <!-- ================= HEADER ================= -->
+
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <h2 class="page-title">
+                Handmade Products
+            </h2>
+            <p class="text-muted">
+                Discover beautiful handmade creations crafted by talented artisans.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <div class="search-box">
+               <i class="bi bi-search"></i>
+                <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Search handmade products..."
+                    [(ngModel)]="searchText"
+                    (ngModelChange)="applyFilter()">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ================= CATEGORY FILTER ================= -->
+
+    <div class="category-section mb-5">
+        <button
+            *ngFor="let cat of categories"
+            class="btn category-btn"
+            [class.active]="selectedCategory===cat"
+            (click)="selectCategory(cat)">
+            {{cat}}
+        </button>
+    </div>
+
+    <!-- ================= FEATURED BANNER ================= -->
+
+    <div class="featured-banner mb-5">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-7">
+
+                <span class="offer-tag">
+
+                    New Collection
+
+                </span>
+
+                <h2>
+
+                    Handmade Collection 2026
+
+                </h2>
+
+                <p>
+
+                    Explore premium handmade products
+                    made with love by creative artisans.
+
+                </p>
+
+                <button class="btn explore-btn" routerLink="/user/products">
+
+                    Explore Collection
+
+                </button>
+
+            </div>
+
+            <div class="col-lg-5 text-center">
+
+                <img
+                    src="https://images.openai.com/static-rsc-4/mLnmckPZXo52MrHVOTuTybN9bskCEksroUF55oO9kro4B94KosJYV_47NMa2wKXW5qWyMWp0d5PqPxSVauYY1EUT4WxY77_hMZXDIhJyeLnnV-4Ij8e2Z6ce5AqeYYtkC0HDZyqr7S3QWlxd0jI0y7mEUoHHlFUcv8kVkhY466dFcBJyyyi9l0dwSKU1cWcI?purpose=fullsize"
+                    class="img-fluid banner-img">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ================= PRODUCTS ================= -->
+
+    <div class="row g-4">
+
+        <div
+            class="col-xl-3 col-lg-4 col-md-6"
+            *ngFor="let product of filteredProducts">
+            <div class="product-card">
+                <!-- Product Image -->
+
+                <div class="product-image">
+
+                    <img
+                        [src]="product.image"
+                        alt="product">
+
+                    <button class="wishlist-btn"><i class="bi bi-heart"></i></button>
+
+                </div>
+
+                <!-- Product Details -->
+
+                <div class="product-body">
+
+                    <span class="category">
+
+                        {{product.category}}
+
+                    </span>
+                    <h5>
+                        {{product.name}}
+                    </h5>
+                    <p class="product-desc">
+                        {{product.description}}
+                    </p>
+                    <!-- Rating -->
+
+                    <div class="rating">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-half"></i>
+                        <span>
+                            {{product.rating}}
+                        </span>
+                    </div>
+                    <!-- Price -->
+                    <div
+                        class="price-section">
+                        <h4>
+                            ₹{{product.price}}
+                        </h4>
+                    </div>
+                    <!-- Buttons -->
+                    <div class="d-grid gap-2 mt-3"><a class="btn details-btn" [routerLink]="['/user/details', product.id]">View Details</a></div>
+                </div>
+            </div>
+            <br><br>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+<div class="admin-layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-store"></i>
+            <h2>CraftNest</h2>
+            <p>Admin Panel</p>
+        </div>
+
+        <ul class="menu">
+
+            <li routerLink="/admin/home"
+                routerLinkActive="active">
+                <i class="fa-solid fa-gauge-high"></i>
+                <span>Home</span>
+            </li>
+
+            <li routerLink="/admin/manage"
+                routerLinkActive="active">
+                <i class="fa-solid fa-box-open"></i>
+                <span>Manage Products</span>
+            </li>
+
+            <li routerLink="/admin/add"
+                routerLinkActive="active">
+                <i class="fa-solid fa-circle-plus"></i>
+                <span>Add Product</span>
+            </li>
+
+            <li routerLink="/admin/orders"
+                routerLinkActive="active">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Orders</span>
+            </li>
+
+        </ul>
+
+        <button class="logout-btn" (click)="logout()">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Logout
+        </button>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <section class="content">
+
+        <router-outlet></router-outlet>
+
+    </section>
+
+</div>

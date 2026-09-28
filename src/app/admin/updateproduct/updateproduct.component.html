@@ -1,0 +1,125 @@
+<div class="container-fluid update-page">
+
+<div class="form-card">
+
+<h2>
+
+<i class="fa-solid fa-pen-to-square"></i>
+
+Update Product
+
+</h2>
+
+<form (ngSubmit)="updateProduct()">
+
+<div class="row">
+
+<div class="col-md-6 mb-3">
+
+<label>Product Name</label>
+
+<input
+class="form-control"
+[(ngModel)]="product.name"
+name="name">
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label>Category</label>
+
+<input
+class="form-control"
+[(ngModel)]="product.category"
+name="category">
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label>Price</label>
+
+<input
+type="number"
+class="form-control"
+[(ngModel)]="product.price"
+name="price">
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label>Rating</label>
+
+<input
+type="number"
+class="form-control"
+[(ngModel)]="product.rating"
+name="rating">
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label>Stock</label>
+
+<input
+type="number"
+class="form-control"
+[(ngModel)]="product.stock"
+name="stock">
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label>Image URL</label>
+
+<input
+class="form-control"
+[(ngModel)]="product.image"
+name="image">
+
+</div>
+
+<div class="col-12 mb-3">
+
+<label>Description</label>
+
+<textarea
+rows="5"
+class="form-control"
+[(ngModel)]="product.description"
+name="description">
+</textarea>
+
+</div>
+
+<div class="col-12">
+
+<img
+[src]="product.image"
+class="preview">
+
+</div>
+
+<div class="text-end mt-4">
+
+<button class="btn save-btn">
+
+<i class="fa-solid fa-floppy-disk"></i>
+
+Save Changes
+
+</button>
+
+</div>
+
+</div>
+
+</form>
+
+</div>
+
+</div>

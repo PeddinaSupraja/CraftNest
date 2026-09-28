@@ -1,0 +1,150 @@
+<div class="container-fluid py-4 orders-page">
+
+    <!-- Page Header -->
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+
+        <div>
+            <h2 class="fw-bold">📦 My Orders</h2>
+            <p class="text-muted mb-0">
+                Track all your handmade purchases.
+            </p>
+        </div>
+
+        <div class="search-box">
+            <input
+                type="text"
+                class="form-control"
+                placeholder="Search Order ID">
+        </div>
+
+    </div>
+
+    <!-- Order Card -->
+
+    <div class="order-card mb-4" *ngFor="let order of orders">
+
+        <div class="row align-items-center">
+
+            <!-- Product Image -->
+
+            <div class="col-lg-2 col-md-3 text-center">
+
+                <img
+                    [src]="order.image"
+                    class="order-image"
+                    alt="">
+
+            </div>
+
+            <!-- Product Details -->
+
+            <div class="col-lg-4 col-md-9">
+
+                <span class="badge bg-light text-dark">
+
+                    Order #{{order.orderId}}
+
+                </span>
+
+                <h4 class="mt-3">
+
+                    {{order.productName}}
+
+                </h4>
+
+                <p class="text-muted">
+
+                    Quantity : {{order.quantity}}
+
+                </p>
+
+                <h5 class="price">
+
+                    ₹{{order.total}}
+
+                </h5>
+
+            </div>
+
+            <!-- Status -->
+
+            <div class="col-lg-3 text-center">
+
+                <span
+                    class="status delivered"
+                    *ngIf="order.status=='Delivered'">
+
+                    Delivered
+
+                </span>
+
+                <span
+                    class="status processing"
+                    *ngIf="order.status=='Processing'">
+
+                    Processing
+
+                </span>
+
+                <span
+                    class="status shipped"
+                    *ngIf="order.status=='Shipped'">
+
+                    Shipped
+
+                </span>
+
+                <p class="mt-3">
+
+                    Ordered
+
+                    <br>
+
+                    {{order.orderDate}}
+
+                </p>
+
+            </div>
+
+            <!-- Buttons -->
+
+            >
+
+        </div>
+
+    </div>
+
+    <!-- Empty Orders -->
+
+    <div
+        class="empty-order text-center mt-5"
+        *ngIf="orders.length==0">
+
+        <img
+            src="https://sridiya.com/build/assets/no_order.6749ebe4.svg"
+            width="250">
+
+        <h3>
+
+            No Orders Yet
+
+        </h3>
+
+        <p>
+
+            Looks like you haven't placed any orders.
+
+        </p>
+
+        <button
+            routerLink="/user/products"
+            class="btn btn-dark">
+
+            Start Shopping
+
+        </button>
+
+    </div>
+
+</div>

@@ -1,27 +1,132 @@
-# CraftNest
+# CraftNest – Handmade Crafts Marketplace
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
+CraftNest is a frontend e-commerce web application designed for browsing and purchasing handmade craft products. The project provides a user-friendly shopping experience with product browsing, wishlist, cart, and order management features.
 
-## Development server
+## 🚀 Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### 👤 User Features
 
-## Code scaffolding
+* User registration and login
+* Browse handmade craft products
+* View product details
+* Add products to cart
+* Update product quantities
+* Add/remove products from wishlist
+* Place and view orders
+* User dashboard
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### 🛠️ Admin Features
 
-## Build
+* Admin dashboard
+* Manage products
+* Manage product categories
+* Manage inventory
+* Manage customers
+* Manage orders
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### 🎨 UI Features
 
-## Running unit tests
+* Responsive design
+* Navigation bar
+* Product cards
+* Shopping cart interface
+* Wishlist interface
+* User and admin dashboards
+* Clean and simple marketplace layout
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 🛠️ Technologies Used
 
-## Running end-to-end tests
+* **Angular**
+* **TypeScript**
+* **HTML5**
+* **CSS3**
+* **Bootstrap**
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## 📂 Project Structure
 
-## Further help
+```text
+CraftNest/
+│
+├── src/
+│   ├── app/
+│   │   ├── login/
+│   │   ├── userdashboard/
+│   │   ├── admindashboard/
+│   │   ├── plants/
+│   │   ├── cart/
+│   │   ├── wishlist/
+│   │   └── orders/
+│   │
+│   ├── assets/
+│   └── ...
+│
+├── angular.json
+├── package.json
+├── tsconfig.json
+└── README.md
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+> The folder structure may vary depending on the final Angular project configuration.
+
+## ▶️ How to Run
+
+### 1. Clone the repository
+
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+```
+
+### 2. Open the project
+
+```bash
+cd CraftNest
+```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the Angular development server
+
+```bash
+ng serve
+```
+
+### 5. Open in browser
+
+```text
+http://localhost:4200
+```
+
+## 🎯 Project Purpose
+
+The main purpose of CraftNest is to practice and demonstrate frontend web development concepts by building an online marketplace for handmade crafts.
+
+The project focuses on:
+
+* Angular application development
+* Component-based architecture
+* TypeScript programming
+* Responsive UI design
+* Product management interfaces
+* Cart and wishlist functionality
+* User and admin dashboard design
+* Routing and frontend services
+
+## 📌 Future Enhancements
+
+* Backend API integration
+* MongoDB database integration
+* Online payment integration
+* Product search and filtering
+* User authentication with JWT
+* Order tracking
+* Product reviews and ratings
+
+## 👩‍💻 Author
+
+Peddina Supraja
+
+Frontend / Full Stack Development Project

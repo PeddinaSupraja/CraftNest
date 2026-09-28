@@ -1,0 +1,344 @@
+/* =========================================
+            CART PAGE
+========================================= */
+.cart-page{
+    background:#F8F4EF;
+    min-height:100vh;
+    padding:30px;
+}
+
+/* =========================================
+            HEADER
+========================================= */
+
+.cart-count{
+
+    background:#8B5E34;
+    color:white;
+    padding:10px 20px;
+    border-radius:30px;
+    font-weight:600;
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+
+}
+
+/* =========================================
+            CART CARD
+========================================= */
+
+.cart-card{
+
+    background:white;
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+    border:1px solid #F1E7DB;
+
+}
+
+.cart-card:hover{
+
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+}
+
+/* =========================================
+            IMAGE
+========================================= */
+
+.product-image{
+
+    width:150px;
+    height:150px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:.4s;
+
+}
+
+.product-image:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* =========================================
+            PRODUCT INFO
+========================================= */
+
+.price{
+
+    color:#8B5E34;
+    font-weight:700;
+    margin-top:12px;
+
+}
+
+.rating{
+
+    color:#FFC107;
+    margin:12px 0;
+
+}
+
+.rating span{
+
+    color:#444;
+    margin-left:8px;
+    font-weight:600;
+
+}
+
+/* =========================================
+            QUANTITY
+========================================= */
+
+.qty-box{
+
+    width:130px;
+    height:48px;
+    border:2px solid #E8D9CB;
+    border-radius:14px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-top:12px;
+    background:white;
+
+}
+
+.qty-btn{
+
+    width:38px;
+    height:38px;
+
+    border:none;
+    background:#F8F4EF;
+
+    border-radius:10px;
+
+    color:#8B5E34;
+
+    transition:.3s;
+
+}
+
+.qty-btn:hover{
+
+    background:#8B5E34;
+    color:white;
+
+}
+
+.qty-box span{
+
+    font-size:20px;
+    font-weight:700;
+
+}
+
+/* =========================================
+            REMOVE BUTTON
+========================================= */
+
+.remove-btn{
+
+    background:#FFF4F4;
+    color:#E74C3C;
+    border:none;
+    border-radius:12px;
+    padding:10px;
+
+}
+
+.remove-btn:hover{
+
+    background:#E74C3C;
+    color:white;
+
+}
+
+/* =========================================
+            ORDER BUTTON
+========================================= */
+
+.order-btn{
+
+    background:#8B5E34;
+    color:white;
+    border-radius:12px;
+    padding:10px;
+    border:none;
+
+}
+
+.order-btn:hover{
+
+    background:#6F4727;
+    color:white;
+
+}
+
+/* =========================================
+            SUMMARY CARD
+========================================= */
+
+.summary-card{
+
+    background:white;
+    border-radius:20px;
+    padding:25px;
+    position:sticky;
+    top:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.summary-card h4{
+
+    font-weight:700;
+    color:#2F2F2F;
+
+}
+
+.summary-row{
+
+    display:flex;
+    justify-content:space-between;
+    margin:15px 0;
+
+}
+
+.summary-row.total{
+
+    font-size:22px;
+    font-weight:700;
+    color:#8B5E34;
+
+}
+
+/* =========================================
+            CHECKOUT
+========================================= */
+
+.checkout-btn{
+
+    width:100%;
+    background:#D69C5E;
+    color:white;
+    border:none;
+    border-radius:14px;
+    padding:14px;
+    font-size:18px;
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.checkout-btn:hover{
+
+    background:#B67A3D;
+    color:white;
+
+}
+
+/* =========================================
+            EMPTY CART
+========================================= */
+
+.empty-cart{
+
+    padding:70px;
+
+}
+
+.empty-image{
+
+    width:320px;
+
+}
+
+.shop-btn{
+
+    background:#8B5E34;
+    color:white;
+    border-radius:12px;
+    padding:12px 30px;
+
+}
+
+.shop-btn:hover{
+
+    background:#6F4727;
+    color:white;
+
+}
+
+/* =========================================
+            RESPONSIVE
+========================================= */
+
+@media(max-width:992px){
+
+.summary-card{
+
+position:relative;
+margin-top:30px;
+
+}
+
+.product-image{
+
+width:120px;
+height:120px;
+
+}
+
+.cart-card{
+
+text-align:center;
+
+}
+
+.qty-box{
+
+margin:auto;
+margin-top:15px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.cart-page{
+
+padding:15px;
+
+}
+
+.cart-count{
+
+margin-top:15px;
+
+}
+
+.summary-row{
+
+font-size:15px;
+
+}
+
+.checkout-btn{
+
+font-size:16px;
+
+}
+
+}

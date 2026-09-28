@@ -1,0 +1,114 @@
+<div class="orders-page">
+
+    <div class="page-header">
+
+        <div>
+            <h2>
+                <i class="fa-solid fa-cart-shopping"></i>
+                Orders Management
+            </h2>
+
+            <p>Manage customer orders and delivery status.</p>
+        </div>
+
+        <input
+            type="text"
+            class="form-control search-box"
+            placeholder="Search Orders..."
+            [(ngModel)]="searchText">
+
+    </div>
+
+    <div class="table-responsive" *ngIf="filteredOrders().length>0">
+
+        <table class="table align-middle">
+
+            <thead>
+
+                <tr>
+
+                    <th>Order ID</th>
+
+                    <th>Customer</th>
+
+                    <th>Product</th>
+
+                    <th>Qty</th>
+
+                    <th>Amount</th>
+
+                    <th>Date</th>
+
+                    <th>Status</th>
+
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr *ngFor="let order of filteredOrders()">
+
+                    <td>#{{order.orderId}}</td>
+
+                    <td>{{order.username}}</td>
+
+                    <td>{{order.productName || order.name}}</td>
+
+                    <td>{{order.quantity}}</td>
+
+                    <td>₹{{order.total}}</td>
+
+                    <td>{{order.date}}</td>
+
+                    <td>
+
+                        <select
+                            class="form-select"
+                            [(ngModel)]="order.status">
+
+                            <option>Processing</option>
+                            <option>Delivered</option>
+                            <option>Cancelled</option>
+
+                        </select>
+
+                    </td>
+
+                    <td>
+
+                        <button
+                            class="btn update-btn"
+                            (click)="updateStatus(order)">
+
+                            <i class="fa-solid fa-floppy-disk"></i>
+
+                            Update
+
+                        </button>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <div
+        class="empty-orders"
+        *ngIf="filteredOrders().length==0">
+
+        <i class="fa-solid fa-box-open"></i>
+
+        <h3>No Orders Found</h3>
+
+        <p>Customer orders will appear here.</p>
+
+    </div>
+
+</div>
